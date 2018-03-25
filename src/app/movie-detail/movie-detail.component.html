@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{movieDetail.Title}}</mat-card-title>
+    <mat-card-subtitle>{{movieDetail.Genre}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="movieDetail.Poster" [alt]="movieDetail.Title" width="100">
+  <mat-card-content>
+    <div class="content-section">
+      <div class="content-title">Plot</div>
+      <div class="content-text">{{movieDetail.Plot}}</div>
+      <div class="content-title">Actors</div>
+      <div class="content-text">{{movieDetail.Actors}}</div>
+      <div class="content-title">Writer</div>
+      <div class="content-text">{{movieDetail.Writer}}</div>
+      <div class="content-title">Awards</div>
+      <div class="content-text">{{movieDetail.Awards}}</div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="backToList()">Go to list</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,18 @@
+<div *ngIf="moviesStream$ | async as movies; else loadGif">
+  <!--first/last/event/odd/index-->
+  <mat-card *ngFor="let movie of movies">
+      <mat-card-header>
+        <a [routerLink]="movie.imdbID" class="detal-link">
+          <img mat-card-image [src]="movie.Poster" [alt]="movie.Title" width="100">
+        </a>
+        <mat-card-title>{{movie.Title}} ({{movie.Year}})</mat-card-title>
+      </mat-card-header>
+      <mat-card-actions>
+          <button mat-button (click) = "deleteMovie(movie.imdbID)">DELETE</button>
+      </mat-card-actions>
+  </mat-card>
+</div>
+
+<ng-template #loadGif>
+  loading....
+</ng-template>

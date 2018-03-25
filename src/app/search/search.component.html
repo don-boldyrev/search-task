@@ -1,0 +1,11 @@
+
+<form class="search-form">
+  <mat-form-field class="field-full-width">
+    <input type="text" matInput [formControl]="stateCtrl" [matAutocomplete]="auto" (focus)="subPanelScroll()" [placeholder]="placeholder">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of searchOptions" value="" (click)="onSelectMovie(option)">
+        {{ option.Title }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

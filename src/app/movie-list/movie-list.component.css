@@ -1,0 +1,23 @@
+.mat-card-image {
+    width: auto;
+    margin-left: 10px;
+    cursor: pointer;
+    margin: 0;
+}
+.mat-card-image:first-child {
+    margin: 0;
+}
+
+.mat-card-title {
+    font-size: 20px;
+}
+
+.mat-card-header {
+    display: block;
+}
+
+.detal-link {
+    display: block;
+    width: 100px;
+    margin-bottom: 10px;
+}
